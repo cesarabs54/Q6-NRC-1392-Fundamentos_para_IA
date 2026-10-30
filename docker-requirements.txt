@@ -1,0 +1,9 @@
+jupyterlab
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+tensorflow-cpu
+torch --index-url https://download.pytorch.org/whl/cpu
+torch
