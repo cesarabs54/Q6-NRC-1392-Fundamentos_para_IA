@@ -1,6 +1,6 @@
 # Estudio de caso: Consulta en un *Dataset*
 
-**Curso:** Fundamentos para Inteligencia Artificial (NRC 94103)
+**Curso:** Fundamentos para Inteligencia Artificial
 **Institución:** Universidad Minuto de Dios (UNIMINUTO)
 **Docente:** Ing. César Alfonso Bolado Silva
 **Elaborado por:** 

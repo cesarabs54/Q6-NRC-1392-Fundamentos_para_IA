@@ -14,7 +14,7 @@ Si no aparecen versiones, instala Docker Desktop o Docker Engine antes de contin
 ## 2. Ubicarte en la carpeta del proyecto
 
 ```bash
-cd C:\xampp\htdocs\web-uniminuto\NRC-70446-Fundamentos-para-IA
+cd C:\xampp\htdocs\web-uniminuto\Fundamentos-para-IA
 ```
 
 ## 3. Construir la imagen del contenedor

@@ -324,7 +324,7 @@ Con NumPy 2.4.6, Laptop lidera las cuatro regiones (Sur 146 400 000, Centro 140 
 3. **Elección de las 5 variables.** El informe prioriza `test preparation course` sobre `lunch` por ser accionable (defendible) y llama «indirecta» a la medición de `lunch`. Por tamaño de efecto, `lunch` pesa más: η² del promedio 8.4 % frente a 6.6 %, y d de Cohen 0.63 frente a 0.55 (en `math`, 0.78 frente a 0.38). Conviene que la justificación diga «por accionable», no «por efecto».
 4. **Cifras de `writing score` sin respaldo en el notebook de la actividad.** El informe cita media 68.05, desviación 15.20 y mínimo 10, pero `EIARV011_A2_analisis_profesor.ipynb` solo hace `describe()` de `math` y `reading`. Los valores sí salen en `Taller_01_EDA_solucion.ipynb`.
 5. **Criterios de formato que el enunciado no fija.** La rúbrica puntúa el «número de páginas» según «el criterio solicitado» y el checklist exige Arial 11 e interlineado 1.5, pero ni `EIARV011_A2.md` ni el anexo indican páginas, tipo de letra ni interlineado.
-6. **Encabezado del informe.** Dice «NRC 94103», deja vacío «Elaborado por» y fecha «Julio de 2026»; este repositorio es el NRC 70446. Conviene revisarlo si se reparte.
+6. **Encabezado del informe.** Deja vacío «Elaborado por» y fecha «Julio de 2026». Conviene revisarlo si se reparte.
 7. **Copias del dataset.** Las copias de `StudentsPerformance.csv` de la actividad, la solución, el Taller 01 y la Semana 6 son idénticas byte a byte. El `.xlsx`, el `.bak_semicolon` y la copia de una entrega usan el mismo contenido (verificado fila a fila), pero estas dos últimas separan con `;`: `read_csv` sin `sep=";"` devuelve **una sola columna** (1000, 1).
 
 **Taller 01**
