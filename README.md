@@ -104,16 +104,16 @@ En este tutorial, aprenderás a usar Python 3 en Visual Studio Code para crear, 
 https://code.visualstudio.com/docs/datascience/data-science-tutorial
 
 ---
-## 🐳 Uso con Docker (Python 3.11.9 amd64)
+## 🐳 Uso con Docker (Python 3.12 amd64)
 
 Construir imagen:
 
 ```bash
-docker build --platform linux/amd64 -t python-3.11.9-amd64 .
+docker build --platform linux/amd64 -t python-3.12-amd64 .
 ```
 
 Probar imagen:
 
 ```bash
-docker run --rm python-3.11.9-amd64
+docker run --rm python-3.12-amd64
 ```
