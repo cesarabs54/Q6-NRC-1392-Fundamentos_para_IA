@@ -1,6 +1,6 @@
 # Guía teórica — Análisis exploratorio de variables categóricas y numéricas
 
-*Apoyo para el taller `Taller_01_EDA.md`. Léela antes de empezar los ejercicios.*
+*Apoyo para el taller `Taller_02_EDA.md`. Léela antes de empezar los ejercicios.*
 
 ---
 
@@ -19,6 +19,10 @@ Este taller es **descriptivo**: nos dice *qué hay* en los datos y *cómo se dis
 | **Fila** (registro) | Un caso observado | Un estudiante |
 | **Columna** (variable) | Una característica medida | `gender`, `math score`, etc. |
 | **DataFrame** | La tabla cargada en pandas | `df` |
+
+### Inspección inicial
+
+Antes de analizar, revisa siempre: `df.shape` (filas y columnas), `df.info()` (tipo de cada columna y no nulos), `df.isna().sum()` (valores faltantes) y `df.duplicated().sum()` (filas repetidas). Así sabes si hace falta limpiar algo antes de calcular.
 
 ## 3. Los dos tipos de variables
 
@@ -72,6 +76,14 @@ Cosas que debes mirar:
 2. **Simetría:** ¿cae igual hacia los dos lados o tiene una **cola** más larga hacia uno? (asimetría)
 3. **Forma de campana** (distribución normal): pico al centro y caída simétrica. Es común en variables como notas o estaturas.
 
+### Boxplot y valores atípicos
+
+El **boxplot** (diagrama de caja) resume una variable numérica con la mediana (línea central), la caja entre `25%` y `75%` (el **IQR**, `Q3 − Q1`) y "bigotes" que llegan hasta unos 1.5 × IQR. Los puntos fuera de los bigotes son **valores atípicos**: están por debajo de `Q1 − 1.5 × IQR` o por encima de `Q3 + 1.5 × IQR`.
+
+- Un atípico **no es automáticamente un error**: puede ser un caso real extremo. Antes de eliminarlo, mira el resto de la fila y pregúntate si es plausible.
+- La mediana y el IQR resisten los extremos; la media y la desviación estándar no.
+- Para comparar varias variables, usa la **misma escala** en todos los gráficos; si cada uno elige su propio eje, la comparación engaña.
+
 ## 8. Comparar grupos con `groupby` (reto final)
 
 `groupby` divide los datos por categoría y calcula una medida en cada grupo:
@@ -79,6 +91,8 @@ Cosas que debes mirar:
 ```python
 df.groupby("categoría")["variable_numérica"].mean()
 ```
+
+Con `.agg(["mean", "median", "std", "count"])` obtienes también la mediana, la dispersión y el **tamaño de cada grupo** (`count`): un promedio calculado con pocos casos tiene menos respaldo.
 
 Interpretación: si los promedios de los grupos son muy distintos, **hay una asociación** entre la categoría y la variable numérica.
 
@@ -89,6 +103,8 @@ Interpretación: si los promedios de los grupos son muy distintos, **hay una aso
 - Calcular promedios de variables categóricas.
 - Escribir `df.math score`: los nombres con espacios van entre comillas, `df["math score"]`.
 - Olvidar `ax=axes[i]` al graficar con `plt.subplots`: salen figuras separadas en lugar de un panel.
+- Eliminar un valor atípico sin revisar si es un dato real.
+- Comparar histogramas con ejes distintos sin darse cuenta.
 - Leer `50%` como "el 50 % de los estudiantes": es la **mediana**.
 - Responder las preguntas de reflexión solo con "sí" o "no": hay que justificar con un número o con lo que se ve en el gráfico.
 
@@ -105,4 +121,7 @@ Interpretación: si los promedios de los grupos son muy distintos, **hay una aso
 | Cuartil | Divide los datos ordenados en cuatro partes |
 | Histograma | Gráfico de barras por rangos de una variable numérica |
 | Asimetría | Cola más larga hacia un lado |
+| Boxplot | Diagrama de caja: mediana, cuartiles y atípicos |
+| Valor atípico | Dato muy alejado del resto (fuera de 1.5 × IQR) |
+| IQR | Rango intercuartílico, `Q3 − Q1` |
 | `groupby` | Agrupar por categoría y calcular una medida |

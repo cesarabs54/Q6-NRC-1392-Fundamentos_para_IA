@@ -22,7 +22,7 @@ El estudiante responderá preguntas en el foro sobre herramientas de Python, con
 
 ## Pregunta orientadora
 
-A partir de la información revisada en la semana y del contenido del [anexo](EIARV011_F3_Anexo.md), responde la siguiente pregunta en el foro:
+A partir de la información revisada en la semana y del contenido del [anexo](EIARV011_F3_Anexo.pdf), responde la siguiente pregunta en el foro:
 
 > Teniendo en cuenta la actividad anterior de “probar el *framework* en 3 minutos” (importar Scikit-learn, TensorFlow o PyTorch y mostrar su versión), ¿cómo influye la elección de este *framework* en el diseño y desarrollo de una aplicación práctica de IA en Python y qué criterios técnicos considerarías más adecuados para seleccionar según el tipo de problema, los datos disponibles y el contexto de aplicación?  
 > Considera aspectos como preprocesamiento, soporte GPU/rendimiento, facilidad de entrenamiento, interpretabilidad, comunidad/documentación e integración para despliegue.

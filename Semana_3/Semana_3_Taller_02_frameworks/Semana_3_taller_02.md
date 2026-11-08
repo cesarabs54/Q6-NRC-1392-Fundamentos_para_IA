@@ -205,7 +205,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 **Cómo leer las reglas:** cada línea con `|---` es una pregunta; la sangría indica a qué rama perteneces; `class: 0, 1, 2` es la especie de `iris` (setosa, versicolor, virginica). Recorre el árbol con una flor imaginaria para ver cómo llega a su clase.
 
-**Qué deberías ver:** un *accuracy* alto (en esta partición, `1.0`), reglas que hablan sobre todo de **pétalos** y una importancia casi nula para los sépalos. Es una explicación que puedes defender ante un tercero.
+**Qué deberías ver:** un *accuracy* alto (en esta partición, `1.0`), reglas que hablan sobre todo de **pétalos** y una importancia exactamente `0` para los sépalos (el árbol no los usó en ninguna regla). Es una explicación que puedes defender ante un tercero.
 
 ### Ejercicio 2.3 — Contar parámetros de una red
 
@@ -285,7 +285,7 @@ resultados = {}
 # en resultados["nombre"]. Al final imprime una línea por modelo.
 ```
 
-**Qué deberías ver:** una línea por modelo con su tiempo y su *accuracy*. Los segundos exactos **dependen de tu computador**; lo que importa es el **orden de magnitud**. Fíjate en cuál tarda milisegundos y cuáles segundos, y en cuál acierta más.
+**Qué deberías ver:** una línea por modelo con su tiempo y su *accuracy*. Los segundos exactos **dependen de tu computador**; lo que importa es el **orden de magnitud**. Fíjate en cuál tarda milisegundos y cuáles segundos, y en cuál acierta más. Ten en cuenta que es **una sola ejecución con una sola partición**: la primera llamada a `fit` de Keras incluye un costo de preparación (compilación del grafo), así que no saques conclusiones de diferencias pequeñas entre las dos redes; repite la celda un par de veces si tienes dudas.
 
 ### Ejercicio 3.2 — ¿Hay GPU disponible?
 

@@ -11,7 +11,7 @@
 
 | Etapa | Librería | Procedimiento / funciones | Para qué sirve | Ejemplo en la actividad |
 |---|---|---|---|---|
-| Carga y exploración | Pandas | `read_csv`, `head()`, `shape`, `info()` | Conocer estructura, tipos y tamaño | `credits.csv`: 77 801 × 5. `titles.csv`: 5 850 × 15 (viene en ZIP: `compression="zip"`) |
+| Carga y exploración | Pandas | `read_csv`, `head()`, `shape`, `info()` | Conocer estructura, tipos y tamaño | `credits.csv`: 77 801 × 5. `titles.csv`: 5 850 × 15 (CSV de texto plano; `compression="zip"` falla con `BadZipFile`) |
 | Calidad de datos | Pandas | `isnull().sum()`, `duplicated()` | Detectar nulos y repetidos | `credits`: 9 772 nulos en `character` (4 550 son los directores, que nunca traen personaje, y 5 222 son actores sin personaje registrado), 0 duplicados. `titles`: 2 619 nulos en `age_certification`, 14 filas con `runtime == 0` |
 | Limpieza | Pandas | `fillna`, `dropna`, `astype("category")`, `groupby().transform()` | Imputar, eliminar o tipar con criterio | `character` → `"Sin especificar"`; `runtime == 0` → mediana por `type` (película/serie) |
 | Variables derivadas | Pandas | `groupby().nunique()`, `agg`, `unstack`, `ast.literal_eval` | Crear numéricas cuando el dataset no las trae | `credits` solo trae identificadores → se construyen `tamano_reparto` y `titulos_por_persona` |
@@ -123,7 +123,7 @@ print(p, cohen_d, cles, rank_biserial)
 
 1. **Pearson vs. Spearman en `titles.csv`.** La solución del profesor concluye que no hay evidencia de relación entre `imdb_score` y `tmdb_popularity` usando Pearson (r = 0.017, p = 0.21). Con Spearman sí aparece una relación positiva muy débil pero significativa (ρ = 0.081, p = 4.4e-10), porque `tmdb_popularity` tiene sesgo 15 y los valores extremos distorsionan a Pearson. Aun así el efecto es pequeño (ρ² ≈ 0.7 %).
 2. **Sensibilidad al desempate en `credits.csv`.** 412 personas tienen créditos como actor *y* como director; `value_counts().idxmax()` resuelve el empate según el tipo de dato. Con `role` como `category` (como en el notebook del profesor) salen 51 468 actores y 3 121 directores; con texto plano salen 51 434 y 3 155 (t = 3.25, p = 0.0012). La conclusión no cambia, pero las n sí.
-3. **Cifra desactualizada en la interpretación del notebook.** En `EIARV011_A4_analisis_credits.ipynb` la celda de interpretación (tras la celda 28) dice que los directores promedian 1.36 títulos, pero la salida del propio notebook es 1.347 (≈ 1.35).
+3. **Cifra desactualizada en la interpretación del notebook.** En `Semana_4_Taller_02_credits/solucion_profesor/EIARV011_A4_analisis_credits.ipynb` la celda de interpretación (tras la celda 28) dice que los directores promedian 1.36 títulos, pero la salida del propio notebook es 1.347 (≈ 1.35).
 4. **La comparación actores/directores del notebook del profesor ya usa t de Welch** (celda 28), no solo promedios. Lo que falta, y lo que este cuadro propone, es verificar supuestos (Levene), contrastar con Mann-Whitney y reportar el tamaño del efecto.
 5. **Pruebas múltiples.** No se aplicó corrección (Bonferroni/FDR) porque cada prueba responde una pregunta distinta del taller; si se encadenaran muchas comparaciones sobre los mismos datos habría que corregir.
 6. **Shapiro-Wilk con N > 5 000.** Por eso los notebooks toman una muestra de 5 000; con el conjunto completo SciPy advierte que el p-valor puede no ser exacto.

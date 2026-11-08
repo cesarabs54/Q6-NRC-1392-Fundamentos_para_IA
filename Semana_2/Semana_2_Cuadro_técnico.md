@@ -6,11 +6,11 @@
 
 | Archivo | Dónde se usa | Tamaño |
 |---|---|---|
-| `StudentsPerformance.csv` | Actividad A2 y Taller 01 | 1 000 × 8: tres notas de 0 a 100 y cinco categóricas. Sin nulos ni duplicados |
-| `credits.csv` | Taller 02 | 77 801 × 5 (5 489 títulos, 54 589 personas). Es el mismo archivo de la Semana 4 (idéntico byte a byte) |
+| `StudentsPerformance.csv` | Actividad A2 y Taller 02 | 1 000 × 8: tres notas de 0 a 100 y cinco categóricas. Sin nulos ni duplicados |
+| `credits.csv` | Taller 03 | 77 801 × 5 (5 489 títulos, 54 589 personas). Es el mismo archivo de la Semana 4 (idéntico byte a byte) |
 | Ventas simuladas y DataFrame de 8 estudiantes | Taller 04 y Ejemplos | 500 filas y 8 filas, generados en la propia celda |
 
-> Todas las cifras de este documento se recalcularon ejecutando el código (Python 3.11.9, pandas 2.3.3 y, para comprobar compatibilidad, pandas 3.0.6; NumPy 2.4.6, Matplotlib 3.11.2, seaborn 0.13.2). Las marcadas con ✅ son las que ya aparecen en los notebooks y claves del profesor (`EIARV011_A2_analisis_profesor.ipynb`, `EIARV011_A2_informe_estudio_de_caso.md`, `Taller_01_EDA_profesor.ipynb` y `Taller_02_EDA_profesor.ipynb`); las marcadas con ➕ son alternativas que se pueden aplicar y que **no** están en esos materiales. El Taller 04 solo tiene guía del estudiante (sin clave): sus cifras son recalculadas y no llevan marca.
+> Todas las cifras de este documento se recalcularon ejecutando el código (Python 3.11.9, pandas 2.3.3 y, para comprobar compatibilidad, pandas 3.0.6; NumPy 2.4.6, Matplotlib 3.11.2, seaborn 0.13.2). Las marcadas con ✅ son las que ya aparecen en los notebooks y claves del profesor (`EIARV011_A2_analisis_profesor.ipynb`, `EIARV011_A2_informe_estudio_de_caso.md`, `Taller_02_EDA_profesor.ipynb` y `Taller_03_EDA_profesor.ipynb`); las marcadas con ➕ son alternativas que se pueden aplicar y que **no** están en esos materiales. El Taller 04 solo tiene guía del estudiante (sin clave): sus cifras son recalculadas y no llevan marca.
 >
 > Esta semana no hay estadística inferencial (SciPy llega en las Semanas 4 y 5), así que la sección 3 reemplaza el «cuadro de pruebas» por un cuadro de funciones de pandas y NumPy.
 
@@ -119,7 +119,7 @@ Regla práctica: antes de imputar, preguntarse si los faltantes son aleatorios. 
 
 ---
 
-## 5. Taller 01 — EDA con `StudentsPerformance.csv`
+## 5. Taller 02 — EDA con `StudentsPerformance.csv`
 
 | Ejercicio | Solución del profesor | Resultado recalculado | Observación |
 |---|---|---|---|
@@ -133,7 +133,7 @@ Regla práctica: antes de imputar, preguntarse si los faltantes son aleatorios. 
 
 ---
 
-## 6. Taller 02 — EDA con `credits.csv`
+## 6. Taller 03 — EDA con `credits.csv`
 
 | Ejercicio | Clave del profesor | Resultado recalculado | Observación |
 |---|---|---|---|
@@ -249,7 +249,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-### 8.2 Taller 02: películas vs. series en `credits.csv`
+### 8.2 Taller 03: películas vs. series en `credits.csv`
 
 ```python
 import pandas as pd
@@ -322,21 +322,21 @@ Con NumPy 2.4.6, Laptop lidera las cuatro regiones (Sur 146 400 000, Centro 140 
 1. **«`math score` es la única variable con valores atípicos».** El informe de referencia lo dice en la pregunta 2 (fila de `math score`), pero con la misma regla IQR salen 8 atípicos en `math score`, 6 en `reading score` (17, 23, 24, 24, 26, 28) y 5 en `writing score` (10, 15, 19, 22, 23). En total son 12 estudiantes distintos y 2 (filas 59 y 980) son atípicos en las tres notas. El notebook solo revisa `math score`, que es lo que pide el anexo («al menos 1 variable»); la frase del informe afirma más de lo que el código comprueba.
 2. **«Relación consistente y gradual» de `parental level of education`.** En el orden natural, `some high school` (65.11) queda por encima de `high school` (63.10), así que la secuencia no es monótona (el resto sí sube: 68.48, 69.57, 71.92, 73.60). La asociación global es débil: Spearman 0.187 y η² = 5.1 % del promedio.
 3. **Elección de las 5 variables.** El informe prioriza `test preparation course` sobre `lunch` por ser accionable (defendible) y llama «indirecta» a la medición de `lunch`. Por tamaño de efecto, `lunch` pesa más: η² del promedio 8.4 % frente a 6.6 %, y d de Cohen 0.63 frente a 0.55 (en `math`, 0.78 frente a 0.38). Conviene que la justificación diga «por accionable», no «por efecto».
-4. **Cifras de `writing score` sin respaldo en el notebook de la actividad.** El informe cita media 68.05, desviación 15.20 y mínimo 10, pero `EIARV011_A2_analisis_profesor.ipynb` solo hace `describe()` de `math` y `reading`. Los valores sí salen en `Taller_01_EDA_profesor.ipynb`.
+4. **Cifras de `writing score` sin respaldo en el notebook de la actividad.** El informe cita media 68.05, desviación 15.20 y mínimo 10, pero `EIARV011_A2_analisis_profesor.ipynb` solo hace `describe()` de `math` y `reading`. Los valores sí salen en `Taller_02_EDA_profesor.ipynb`.
 5. **Criterios de formato que el enunciado no fija.** La rúbrica puntúa el «número de páginas» según «el criterio solicitado» y el checklist exige Arial 11 e interlineado 1.5, pero ni `EIARV011_A2.md` ni el anexo indican páginas, tipo de letra ni interlineado.
 6. **Encabezado del informe.** Deja vacío «Elaborado por» y fecha «Julio de 2026». Conviene revisarlo si se reparte.
-7. **Copias del dataset.** Las copias de `StudentsPerformance.csv` de la actividad, la solución, el Taller 01 y la Semana 6 son idénticas byte a byte. El `.xlsx`, el `.bak_semicolon` y la copia de una entrega usan el mismo contenido (verificado fila a fila), pero estas dos últimas separan con `;`: `read_csv` sin `sep=";"` devuelve **una sola columna** (1000, 1).
+7. **Copias del dataset.** Las copias de `StudentsPerformance.csv` de la actividad, la solución, el Taller 02 y la Semana 6 son idénticas byte a byte. El `.xlsx`, el `.bak_semicolon` y la copia de una entrega usan el mismo contenido (verificado fila a fila), pero estas dos últimas separan con `;`: `read_csv` sin `sep=";"` devuelve **una sola columna** (1000, 1).
 
-**Taller 01**
+**Taller 02**
 
 8. **Reflexión 4.** La clave dice que `math score` tiene la mayor desviación estándar, pero la salida del propio notebook muestra `writing` 15.196 > `math` 15.163 > `reading` 14.600 (diferencia de 0.03: prácticamente empate). Lo que sí es cierto es que `math` tiene el rango más amplio (0 a 100, frente a 90 y 83).
 
-**Taller 02**
+**Taller 03**
 
 9. **«Por película» mezcla películas y series.** El notebook habla de «películas», pero los identificadores `tm` (película) y `ts` (serie) están mezclados: 3 541 películas y 1 799 series con actores. Las películas promedian 16.72 actores (mediana 12) y las series 7.80 (mediana 7). La correspondencia `tm` = MOVIE y `ts` = SHOW se verificó contra `titles.csv` de la Semana 4 (3 744 y 2 106 títulos). Además, 149 títulos tienen solo director y 1 448 no tienen director: `groupby` sobre un rol los descarta en silencio.
 10. **`name` no identifica personas.** Hay 264 nombres con más de un `person_id` (homónimos, como «Akshay Kumar») y 15 nombres con espacios sobrantes. Para contar personas hay que usar `person_id` (el top 10 coincide por casualidad). Las 88 combinaciones (persona, título, rol) repetidas tienen personajes distintos: no son duplicados.
 11. **`character` nulo.** Los 9 772 nulos son 4 550 directores y 5 222 actores; no son «los directores» (así lo afirma el cuadro de la Semana 4).
-12. **No comparar con la Semana 4 sin mirar la definición.** El Taller 02 define `cast_size` solo con actores (5 340 títulos, media 13.72); la Semana 4 define `tamano_reparto` como `nunique(person_id)` por título con cualquier rol (5 489 títulos, media 14.10). Es el mismo CSV con otra variable.
+12. **No comparar con la Semana 4 sin mirar la definición.** El Taller 03 define `cast_size` solo con actores (5 340 títulos, media 13.72); la Semana 4 define `tamano_reparto` como `nunique(person_id)` por título con cualquier rol (5 489 títulos, media 14.10). Es el mismo CSV con otra variable.
 
 **Guía de la sesión, Taller 04 y entorno**
 

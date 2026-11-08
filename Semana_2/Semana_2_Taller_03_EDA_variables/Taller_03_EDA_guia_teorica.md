@@ -1,12 +1,12 @@
 # Guía teórica — Construir y analizar variables a partir de conteos
 
-*Apoyo para el taller `Taller_02_EDA.ipynb` (dataset `credits.csv`). Léela antes de empezar los ejercicios. Si no recuerdas qué es una variable categórica o numérica, repasa la guía del Taller 01.*
+*Apoyo para el taller `Taller_03_EDA.ipynb` (dataset `credits.csv`). Léela antes de empezar los ejercicios. Si no recuerdas qué es una variable categórica o numérica, repasa la guía del Taller 02.*
 
 ---
 
 ## 1. La idea central de este taller
 
-En el Taller 01 el dataset ya traía columnas numéricas (las notas). Aquí **no**: `credits.csv` solo tiene identificadores y texto. Entonces aprenderás algo muy común en el trabajo real con datos:
+En el Taller 02 el dataset ya traía columnas numéricas (las notas). Aquí **no**: `credits.csv` solo tiene identificadores y texto. Entonces aprenderás algo muy común en el trabajo real con datos:
 
 > **Si no tienes la variable numérica que necesitas, la construyes a partir de conteos.**
 
@@ -38,9 +38,9 @@ Cada fila es **un crédito**: una persona acreditada en un título. No es una pe
 
 ## 4. Desbalance: ¿problema o característica?
 
-En el Taller 01 vimos que un grupo muy pequeño da comparaciones poco confiables. Aquí `role` también está muy desbalanceada (casi todo son `ACTOR`), pero la causa es distinta:
+En el Taller 02 vimos que un grupo muy pequeño da comparaciones poco confiables. Aquí `role` también está muy desbalanceada (casi todo son `ACTOR`), pero la causa es distinta:
 
-| | Taller 01 (`test preparation course`) | Taller 02 (`role`) |
+| | Taller 02 (`test preparation course`) | Taller 03 (`role`) |
 |---|---|---|
 | Causa del desbalance | La muestra de estudiantes | La **naturaleza del fenómeno** |
 | ¿Hay que preocuparse? | Sí, al comparar grupos | No: una película tiene muchos actores y normalmente un director |
@@ -74,7 +74,7 @@ Dos detalles:
 
 ## 6. Distribución en campana vs. distribución sesgada
 
-Con las notas del Taller 01, la media y la mediana eran casi iguales y el histograma parecía una campana. Con el tamaño del reparto **no será así**.
+Con las notas del Taller 02, la media y la mediana eran casi iguales y el histograma parecía una campana. Con el tamaño del reparto **no será así**.
 
 | | **Simétrica (campana)** | **Sesgada a la derecha (cola larga)** |
 |---|---|---|

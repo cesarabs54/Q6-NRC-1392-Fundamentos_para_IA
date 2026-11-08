@@ -39,3 +39,6 @@ Thumbs.db
 
 # Temporary text dumps from docx extraction
 docx_dump.txt
+# Modelos generados por el ejercicio 4.1 del Taller 02
+modelo_*.pt
+modelo_*.joblib
