@@ -1,6 +1,6 @@
 # Taller en clase: Prueba de Hipótesis (con Python)
 
-**Fundamentos para IA · NRC 94103 · Semana 6**
+**Fundamentos para IA · Semana 6**
 
 **Dataset de trabajo:** `StudentsPerformance.csv` (1000 registros de estudiantes).
 

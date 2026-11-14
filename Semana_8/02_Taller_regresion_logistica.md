@@ -1,6 +1,6 @@
 # Taller: regresión logística paso a paso — modelo matemático
 
-**Fundamentos para IA · NRC 94103 · Semana 8**
+**Fundamentos para IA · Semana 8**
 
 **Datos:** `StudentsPerformance.csv` (1000 estudiantes, mismo archivo de las Semanas 6 y 7 —
 [`Semana_7/StudentsPerformance.csv`](../Semana_7/StudentsPerformance.csv), también disponible en esta

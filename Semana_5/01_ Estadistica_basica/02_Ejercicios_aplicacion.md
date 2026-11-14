@@ -1,6 +1,6 @@
 # Ejercicios de aplicación: Estadística básica y descriptiva/inferencial
 
-**Curso:** Fundamentos para Inteligencia Artificial — NRC 94103
+**Curso:** Fundamentos para Inteligencia Artificial
 **Semana 5:** Estadística básica y visualización de datos
 **Basado en:** [`01_Estadistica_basica.md`](01_Estadistica_basica.md) — guía conceptual para el Portafolio de evidencias (Semana 6, `EIARV011_A6`)
 **Datos:** [`StudentsPerformance.csv`](StudentsPerformance.csv) — notas de 1000 estudiantes (matemáticas, lectura y escritura), más variables de contexto (género, tipo de almuerzo, curso de preparación, nivel educativo de los padres, grupo étnico).

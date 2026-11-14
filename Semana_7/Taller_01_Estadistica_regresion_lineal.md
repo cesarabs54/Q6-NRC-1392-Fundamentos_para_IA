@@ -1,6 +1,6 @@
 # Taller: Fundamentos de Estadística para Regresión Lineal
 
-**Fundamentos para IA · NRC 94103 · Semana 7**
+**Fundamentos para IA · Semana 7**
 
 Este taller **no usa Python**: es un taller de lápiz y papel (o calculadora) para que domines, paso a paso,
 las fórmulas que hay *detrás* de la regresión lineal — las mismas que `scipy`/`statsmodels` calculan por ti

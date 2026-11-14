@@ -1,6 +1,6 @@
 # Taller en clase: Regresión Lineal (con Python)
 
-**Fundamentos para IA · NRC 94103 · Semana 7**
+**Fundamentos para IA · Semana 7**
 
 **Dataset de trabajo:** `StudentsPerformance.csv` (1000 registros de estudiantes).
 

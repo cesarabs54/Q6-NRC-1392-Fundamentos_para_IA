@@ -1,6 +1,6 @@
 # Taller de refuerzo — Regresión logística paso a paso
 
-**Fundamentos para IA · NRC 94103 · Semana 8**
+**Fundamentos para IA · Semana 8**
 
 Este taller está pensado para que afiances, en orden, los conceptos que evalúa "MA Evaluación 8". No son las
 mismas preguntas del examen: son ejercicios previos, con cálculos completos, para que llegues a la

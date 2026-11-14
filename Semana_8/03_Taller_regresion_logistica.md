@@ -1,6 +1,6 @@
 # Taller en clase: Regresión Logística (con Python)
 
-**Fundamentos para IA · NRC 94103 · Semana 8**
+**Fundamentos para IA · Semana 8**
 
 **Dataset de trabajo:** `StudentsPerformance.csv` (1000 registros de estudiantes).
 

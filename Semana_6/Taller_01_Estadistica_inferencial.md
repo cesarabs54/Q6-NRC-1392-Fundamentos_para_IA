@@ -1,6 +1,6 @@
 # Taller: Estadística Inferencial
 
-**Fundamentos para IA · NRC 94103**
+**Fundamentos para IA**
 
 **Dataset de referencia:** `StudentsPerformance.csv`. Todos los ejercicios son **solo estadística — sin
 código Python**: se resuelven razonando sobre resultados ya dados. El objetivo es afianzar los conceptos de

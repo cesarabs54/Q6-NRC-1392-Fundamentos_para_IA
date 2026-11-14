@@ -1,6 +1,6 @@
 # Estadística básica para el Portafolio de Evidencias (Semana 6)
 
-**Curso:** Fundamentos para Inteligencia Artificial — NRC 94103  
+**Curso:** Fundamentos para Inteligencia Artificial  
 
 **Para qué sirve este documento:** reunir, en un solo lugar y sin código, toda la estadística que necesitas entender para resolver el taller [**EIARV011_A6 — Portafolio de evidencias: Análisis inferencial de datos**](../../Semana_6/Semana_6_Actividad/EIARV011_A6.md) (y su [anexo con los pasos sugeridos](../../Semana_6/Semana_6_Actividad/EIARV011_A6_Anexo.md))  
 

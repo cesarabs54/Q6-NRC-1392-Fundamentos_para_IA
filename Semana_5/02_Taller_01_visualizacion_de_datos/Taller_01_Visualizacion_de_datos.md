@@ -1,6 +1,6 @@
 # Taller en clase: Visualización de Datos con Matplotlib (Python)
 
-**Fundamentos para IA · NRC 94103 · Semana 5**
+**Fundamentos para IA · Semana 5**
 
 **Nivel:** Taller básico
 
